@@ -3,7 +3,8 @@ import tensorflow as tf
 
 def callMe():
     # hello()
-    arithmetic()
+    # arithmetic()
+    uniqueName()
     pass
 
 
@@ -31,3 +32,14 @@ def arithmetic():
     print("The Add: {}".format(add))
     print("The mul: {}".format(mul))
     print("The sub: {}".format(sub))
+
+
+# each tensor should have unique name if it does not have it will make the versions
+def uniqueName():
+    a = tf.constant(value=3, name='j', dtype=tf.float32)
+    b = tf.constant(value=3, name='j', dtype=tf.float32)
+    print(a)
+    print(b)
+    # if no name given tensor flow will automatically provide the name to the tesor
+    c = tf.add(a,b)
+    print(c)
