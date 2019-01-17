@@ -1,3 +1,4 @@
+# Lecture : 17/01/2019
 import tensorflow as tf
 
 
